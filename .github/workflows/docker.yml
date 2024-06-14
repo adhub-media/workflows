@@ -57,7 +57,7 @@
               env:
                 DOCKER_METADATA_PR_HEAD_SHA: 'true'
               with:
-                images: ${{ inputs.REPOSITORY }}
+                images: ${{ inputs.image_repository }}
                 tags: |
                   type=ref,suffix=-{{sha}},event=branch
                   type=ref,suffix=-{{sha}},event=pr
